@@ -9,3 +9,26 @@
  */
 
 
+include_once './config/database.php';
+
+$db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE) or die("Could not connect : " . mysqli_error());
+$db->set_charset('utf8');
+
+$reason = $db->real_escape_string(isset($_GET['reason']) ? $_GET['reason'] : '');
+$origin_url = $db->real_escape_string(isset($_GET['original_request']['url']) ? $_GET['original_request']['url'] : '');
+$req_type = isset($_GET['original_request']['type']) ? $_GET['original_request']['type'] : '';
+
+$now = date('c');
+
+// insert to database
+$str_query = "INSERT INTO errors (reason, origin_url, type, created_at) VALUES ('{$reason}', '{$origin_url}', '{$req_type}', '{$now}')";
+$db->query($str_query);
+
+$insert_id = $db->insert_id;
+
+if ($insert_id) {
+    echo 'inserted with id=' . $insert_id;
+}
+else {
+    echo 'Insert error';
+}
