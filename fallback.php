@@ -19,9 +19,10 @@ $origin_url = $db->real_escape_string(isset($_GET['original_request']['url']) ? 
 $req_type = isset($_GET['original_request']['type']) ? $_GET['original_request']['type'] : '';
 
 $now = date('c');
+$details = $db->real_escape_string(json_encode($_GET));
 
 // insert to database
-$str_query = "INSERT INTO errors (reason, origin_url, type, created_at) VALUES ('{$reason}', '{$origin_url}', '{$req_type}', '{$now}')";
+$str_query = "INSERT INTO errors (reason, origin_url, type, details, created_at) VALUES ('{$reason}', '{$origin_url}', '{$req_type}', '{$details}', '{$now}')";
 $db->query($str_query);
 
 $insert_id = $db->insert_id;

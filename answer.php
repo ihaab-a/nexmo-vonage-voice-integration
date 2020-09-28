@@ -12,20 +12,25 @@ $db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE) or die("Could not c
 $db->set_charset('utf8');
 
 
-function save_sms_row($data) {
-    global $db;
-    $number = isset($data['to']) ? $data['to'] : '';
-    $message = $db->real_escape_string(isset($data['text']) ? $data['text'] : '');
+$number_to = isset($_GET['to']) ? $_GET['to'] : '';
+$number_from = isset($_GET['from']) ? $_GET['from'] : '';
+$uuid = isset($_GET['uuid']) ? $_GET['uuid'] : '';
+$c_uuid = isset($_GET['conversation_uuid']) ? $_GET['conversation_uuid'] : '';
+$details = $db->real_escape_string(json_encode($_GET));
 
-    if (!is_string($data)) {
-        $data = json_encode($data);
-    }
-    $data = !empty($data) ? $db->real_escape_string($data) : '';
-    $now = date('c');
-    $str_query = "INSERT INTO sms_temp (body, created_at, to_number, content) VALUES ('{$data}', '{$now}', '{$number}', '{$message}')";
-    $db->query($str_query);
-    return $db->insert_id;
+$now = date('c');
+
+$str_query = "INSERT INTO answers (number_from, number_to, uuid, conversation_uuid, details, created_at) 
+      VALUES ('{$number_from}', '{$number_to}', '{$uuid}', '{$c_uuid}', '{$details}', '{$now}')";
+
+$db->query($str_query);
+$insert_id = $db->insert_id;
+
+if ($insert_id) {
+    echo 'Inserted with id=' . $insert_id;
+}
+else {
+    echo 'Something went wrong!';
 }
 
-$params = $_GET;
 
