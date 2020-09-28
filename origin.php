@@ -15,8 +15,8 @@ use Vonage\Client\Credentials\Keypair;
 
 require_once './vendor/autoload.php';
 
-define('PRIVATE_KEY', './private_oni.key');
-define('APP_ID', 'b0b4f038-e4e3-48ce-a3a4-badb8770cbb5');
+define('PRIVATE_KEY', './private.key');
+define('APP_ID', '0f396283-55a8-4dc3-9dfa-075d93219bd9');
 
 $keypair = new Keypair(
     file_get_contents("private.key"),

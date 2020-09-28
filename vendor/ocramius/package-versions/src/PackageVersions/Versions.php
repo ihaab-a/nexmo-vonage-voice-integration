@@ -39,7 +39,7 @@ final class Versions
   'vonage/client' => '2.4.0@29f23e317d658ec1c3e55cf778992353492741d7',
   'vonage/client-core' => '2.4.0@a397028a168ef2ba65804af893ea9c68f1478a10',
   'vonage/nexmo-bridge' => '0.1.0@62653b1165f4401580ca8d2b859f59c968de3711',
-  'tai/045-nexmo' => 'No version set (parsed as 1.0.0)@',
+  'tai/045-nexmo' => 'dev-master@94bc4fa631c863c43dd701dfb35c7f5906bc8d5d',
 );
 
     private function __construct()
