@@ -1,0 +1,8 @@
+{
+    "name": "tai/045-nexmo",
+    "require": {
+        "slim/slim": "^3.0",
+        "vonage/client": "^2.4",
+        "vonage/client-core": "^2.4"
+    }
+}
