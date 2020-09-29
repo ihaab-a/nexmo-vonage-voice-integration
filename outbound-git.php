@@ -39,14 +39,14 @@ $outboundCall = new \Vonage\Voice\OutboundCall(
 );
 
 $outboundCall->setAnswerWebhook(
-    new \Nexmo\Voice\Webhook(
+    new \Vonage\Voice\Webhook(
         'https://developer.nexmo.com/ncco/tts.json',
-        \Nexmo\Voice\Webhook::METHOD_GET
+        \Vonage\Voice\Webhook::METHOD_GET
     )
 );
 
 $ncco = new NCCO();
-$ncco->addAction(new \Nexmo\Voice\NCCO\Action\Talk('This is a text to speech call from Nexmo'));
+$ncco->addAction(new \Vonage\Voice\NCCO\Action\Talk('This is a text to speech call from Nexmo'));
 $outboundCall->setNCCO($ncco);
 
 $response = $client->voice()->createOutboundCall($outboundCall);
