@@ -13,15 +13,22 @@ include_once './config/database.php';
 $db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE) or die("Could not connect : " . mysqli_error());
 $db->set_charset('utf8');
 
-$number_from = isset($_GET['from']) ? $_GET['from'] : '';
-$number_to = isset($_GET['to']) ? $_GET['to'] : '';
-$uuid = isset($_GET['uuid']) ? $_GET['uuid'] : '';
-$c_uuid = isset($_GET['conversation_uuid']) ? $_GET['conversation_uuid'] : '';
-$status = isset($_GET['status']) ? $_GET['status'] : '';
-$direction = isset($_GET['direction']) ? $_GET['direction'] : '';
-$timestamp = isset($_GET['timestamp']) ? $_GET['timestamp'] : '';
+if (!empty($_GET)) {
+    $data = $_GET;
+} else {
+    $data = json_decode(file_get_contents('php://input'), true);
+}
 
-$details = $db->real_escape_string(json_encode($_GET));
+
+$number_from = isset($data['from']) ? $data['from'] : '';
+$number_to = isset($data['to']) ? $data['to'] : '';
+$uuid = isset($data['uuid']) ? $data['uuid'] : '';
+$c_uuid = isset($data['conversation_uuid']) ? $data['conversation_uuid'] : '';
+$status = isset($data['status']) ? $data['status'] : '';
+$direction = isset($data['direction']) ? $data['direction'] : '';
+$timestamp = isset($data['timestamp']) ? $data['timestamp'] : '';
+
+$details = $db->real_escape_string(json_encode($data));
 $now = date('c');
 
 $str_query = "INSERT INTO events (number_from, number_to, uuid, conversation_uuid, status, direction, timestamp, details, created_at) 

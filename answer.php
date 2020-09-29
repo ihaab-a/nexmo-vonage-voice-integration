@@ -11,12 +11,18 @@ include_once './config/database.php';
 $db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE) or die("Could not connect : " . mysqli_error());
 $db->set_charset('utf8');
 
+if (!empty($_GET)) {
+    $data = $_GET;
+} else {
+    $data = json_decode(file_get_contents('php://input'), true);
+}
 
-$number_to = isset($_GET['to']) ? $_GET['to'] : '';
-$number_from = isset($_GET['from']) ? $_GET['from'] : '';
-$uuid = isset($_GET['uuid']) ? $_GET['uuid'] : '';
-$c_uuid = isset($_GET['conversation_uuid']) ? $_GET['conversation_uuid'] : '';
-$details = $db->real_escape_string(json_encode($_GET));
+
+$number_to = isset($data['to']) ? $data['to'] : '';
+$number_from = isset($data['from']) ? $data['from'] : '';
+$uuid = isset($data['uuid']) ? $data['uuid'] : '';
+$c_uuid = isset($data['conversation_uuid']) ? $data['conversation_uuid'] : '';
+$details = $db->real_escape_string(json_encode($data));
 
 $now = date('c');
 
