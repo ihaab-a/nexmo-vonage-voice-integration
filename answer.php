@@ -15,7 +15,8 @@ $db->set_charset('utf8');
 
 if (!empty($_GET)) {
     $data = $_GET;
-} else {
+}
+else {
     $data = json_decode(file_get_contents('php://input'), true);
 }
 

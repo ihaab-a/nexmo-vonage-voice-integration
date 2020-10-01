@@ -2,6 +2,7 @@
 
 require_once './vendor/autoload.php';
 include_once './config/database.php';
+include_once './config/constants.php';
 $db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE) or die("Could not connect : " . mysqli_error());
 $db->set_charset('utf8');
 
@@ -19,6 +20,13 @@ $db->set_charset('utf8');
  *   timestamp': '2018-08-10T11:19:31.744Z'}
  *  1.2.3.4 - - [10/Aug/2018 11:19:31] "POST /webhooks/recordings HTTP/1.1" 200 -
 */
+
+$basic = new Basic(API_KEY, API_SECRET);
+$keypair = new Keypair(
+    file_get_contents(PRIVATE_KEY),
+    APP_ID
+);
+$client = new Client(new Container($basic, $keypair));
 
 $request_array = json_decode(file_get_contents('php://input'), true);
 $recording = \Vonage\Voice\Webhook\Factory::createFromArray($request_array);

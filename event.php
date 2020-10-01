@@ -7,9 +7,7 @@
  * // Logs all events from the application
  */
 
-
 include_once './config/database.php';
-
 $db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE) or die("Could not connect : " . mysqli_error());
 $db->set_charset('utf8');
 
@@ -18,7 +16,6 @@ if (!empty($_GET)) {
 } else {
     $data = json_decode(file_get_contents('php://input'), true);
 }
-
 
 $number_from = isset($data['from']) ? $data['from'] : '';
 $number_to = isset($data['to']) ? $data['to'] : '';
