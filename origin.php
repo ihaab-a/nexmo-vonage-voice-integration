@@ -29,14 +29,17 @@ $outboundCall = new OutboundCall(
     new Phone("40371703012")
 );
 
-$outboundCall->setAnswerWebhook(
-    new Webhook(
-        'https://developer.nexmo.com/ncco/tts.json',
-        Webhook::METHOD_GET
-    )
-    )->setEventWebhook(
-    new Webhook('http://ec2-3-12-163-249.us-east-2.compute.amazonaws.com/test/event.php', Webhook::METHOD_POST)
-);
+$outboundCall
+    ->setAnswerWebhook(
+        new Webhook(
+            'https://developer.nexmo.com/ncco/tts.json',
+            Webhook::METHOD_GET
+        ))
+    ->setEventWebhook(
+        new Webhook(
+            'http://ec2-3-12-163-249.us-east-2.compute.amazonaws.com/test/event.php',
+            Webhook::METHOD_POST
+        ));
 $response = $client->voice()->createOutboundCall($outboundCall);
 
 print_r($response);
