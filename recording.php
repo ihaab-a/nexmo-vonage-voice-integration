@@ -8,9 +8,6 @@ $db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE) or die("Could not c
 $db->set_charset('utf8');
 
 /**
- *
- *
- *
  * POST Payload:
  * {'conversation_uuid': 'CON-ddddaaaa-bbbb-cccc-dddd-0123456789de',
  *   end_time': '2018-08-10T11:19:31Z',
@@ -27,6 +24,7 @@ use Vonage\Client\Credentials\Basic;
 use Vonage\Client\Credentials\Container;
 use Vonage\Client\Credentials\Keypair;
 
+// initialize Nexmo client instance.
 $basic = new Basic(API_KEY, API_SECRET);
 $keypair = new Keypair(
     file_get_contents(PRIVATE_KEY),
@@ -34,19 +32,13 @@ $keypair = new Keypair(
 );
 $client = new Client(new Container($basic, $keypair));
 
+// analyze request data.
 $request_array = json_decode(file_get_contents('php://input'), true);
 $recording = \Vonage\Voice\Webhook\Factory::createFromArray($request_array);
 $record_url = $recording->getRecordingUrl();
-
-// from here, refer: https://developer.nexmo.com/voice/voice-api/code-snippets/download-a-recording
 $record_uuid = $recording->getRecordingUuid();
 $data = $client->get($record_url);
-// logs to database
-$now = date('c');
-$details = $db->real_escape_string(json_encode($request_array));
-$str_query = "INSERT INTO recordings (url, uuid, details, created_at) 
-    VALUES ('{$record_url}', '{$record_uuid}', '{$details}', '{$now}')";
-$db->query($str_query);
 
+// write recorded call to local file.
 file_put_contents('./recordings/' . time() . '.mp3', $data->getBody());
 echo $record_url;
