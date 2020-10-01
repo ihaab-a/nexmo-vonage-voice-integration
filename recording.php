@@ -1,6 +1,9 @@
 <?php
 
 require_once './vendor/autoload.php';
+include_once './config/database.php';
+$db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE) or die("Could not connect : " . mysqli_error());
+$db->set_charset('utf8');
 
 /**
  *
@@ -32,6 +35,4 @@ $str_query = "INSERT INTO recordings (url, uuid, details, created_at)
 $db->query($str_query);
 
 file_put_contents('./recordings/' . time() . '.mp3', $data->getBody());
-
-
 echo $record_url;
