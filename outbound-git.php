@@ -55,12 +55,12 @@ $outboundCall = new OutboundCall(
     new Phone($number_from)
 );
 
-$outboundCall->setAnswerWebhook(
-    new Webhook(
-        'https://developer.nexmo.com/ncco/tts.json',
-        Webhook::METHOD_GET
-    )
-);
+//$outboundCall->setAnswerWebhook(
+//    new Webhook(
+//        'https://developer.nexmo.com/ncco/tts.json',
+//        Webhook::METHOD_GET
+//    )
+//);
 
 $outboundCall->setEventWebhook(
     new Webhook($baseUrl . 'test/event.php',
