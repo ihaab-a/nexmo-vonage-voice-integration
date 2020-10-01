@@ -20,19 +20,19 @@ if (!empty($_GET)) {
 }
 
 
-//$number_to = isset($data['to']) ? $data['to'] : '';
-//$number_from = isset($data['from']) ? $data['from'] : '';
-//$uuid = isset($data['uuid']) ? $data['uuid'] : '';
-//$c_uuid = isset($data['conversation_uuid']) ? $data['conversation_uuid'] : '';
-//$details = $db->real_escape_string(json_encode($data));
-//
-//$now = date('c');
-//
-//$str_query = "INSERT INTO answers (number_from, number_to, uuid, conversation_uuid, details, created_at)
-//      VALUES ('{$number_from}', '{$number_to}', '{$uuid}', '{$c_uuid}', '{$details}', '{$now}')";
-//
-//$db->query($str_query);
-//$insert_id = $db->insert_id;
+$number_to = isset($data['to']) ? $data['to'] : '';
+$number_from = isset($data['from']) ? $data['from'] : '';
+$uuid = isset($data['uuid']) ? $data['uuid'] : '';
+$c_uuid = isset($data['conversation_uuid']) ? $data['conversation_uuid'] : '';
+$details = $db->real_escape_string(json_encode($data));
+
+$now = date('c');
+
+$str_query = "INSERT INTO answers (number_from, number_to, uuid, conversation_uuid, details, created_at)
+      VALUES ('{$number_from}', '{$number_to}', '{$uuid}', '{$c_uuid}', '{$details}', '{$now}')";
+
+$db->query($str_query);
+$insert_id = $db->insert_id;
 
 $record_url = "http://ec2-3-12-163-249.us-east-2.compute.amazonaws.com/test/recording.php";
 
