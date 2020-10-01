@@ -21,6 +21,11 @@ $db->set_charset('utf8');
  *  1.2.3.4 - - [10/Aug/2018 11:19:31] "POST /webhooks/recordings HTTP/1.1" 200 -
 */
 
+use Vonage\Client;
+use Vonage\Client\Credentials\Basic;
+use Vonage\Client\Credentials\Container;
+use Vonage\Client\Credentials\Keypair;
+
 $basic = new Basic(API_KEY, API_SECRET);
 $keypair = new Keypair(
     file_get_contents(PRIVATE_KEY),
