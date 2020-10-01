@@ -14,6 +14,7 @@ use Vonage\Voice\Endpoint\Phone;
 use Vonage\Client\Credentials\Keypair;
 
 require_once './vendor/autoload.php';
+$baseUrl = "http://952a5d2f3352.ngrok.io/045-nexmo/";
 
 define('PRIVATE_KEY', './private.key');
 define('APP_ID', '0f396283-55a8-4dc3-9dfa-075d93219bd9');
@@ -32,12 +33,12 @@ $outboundCall = new OutboundCall(
 $outboundCall
     ->setAnswerWebhook(
         new Webhook(
-            'http://ec2-3-12-163-249.us-east-2.compute.amazonaws.com/test/ncco.php',
+            $baseUrl . 'ncco.php',
             Webhook::METHOD_GET
         ))
     ->setEventWebhook(
         new Webhook(
-            'http://ec2-3-12-163-249.us-east-2.compute.amazonaws.com/test/event.php',
+            $baseUrl . 'event.php',
             Webhook::METHOD_POST
         ));
 $response = $client->voice()->createOutboundCall($outboundCall);

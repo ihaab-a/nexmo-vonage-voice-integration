@@ -42,10 +42,10 @@ $outboundCall->setEventWebhook(
 $ncco = new NCCO();
 $record = new Record();
 $record->setEventWebhook(new Webhook( $baseUrl. 'recording.php', Webhook::METHOD_POST));
-$ncco->addAction($record);
+//$ncco->addAction($record);
 $ncco->addAction(new Talk('Hey, do you like music?'));
-//$ncco->addAction(new Stream(MUSIC_FILE));
-//$ncco->addAction(new Talk('Thanks for your listening! Good day!'));
+$ncco->addAction(new Stream(MUSIC_FILE));
+$ncco->addAction(new Talk('Thanks for your listening! Good day!'));
 $outboundCall->setNCCO($ncco);
 
 $response = $client->voice()->createOutboundCall($outboundCall);
