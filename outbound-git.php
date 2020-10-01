@@ -7,12 +7,12 @@
  */
 
 $http = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
-$baseUrl = $http . $_SERVER['HTTP_HOST'] . preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
-
+//$baseUrl = $http . $_SERVER['HTTP_HOST'] . preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
+$baseUrl = "http://ec2-3-12-163-249.us-east-2.compute.amazonaws.com/test/";
 
 require_once './vendor/autoload.php';
-//$number_to = "8618640211091";
-$number_to = "15612239473";
+$number_to = "12064531225";
+//$number_to = "15612239473";
 $number_from = "12013316626";
 // canadian
 //$number_to = "14382266378";
@@ -63,17 +63,17 @@ $outboundCall = new OutboundCall(
 //);
 
 $outboundCall->setEventWebhook(
-    new Webhook($baseUrl . 'test/event.php',
+    new Webhook($baseUrl . 'event.php',
         Webhook::METHOD_POST)
 );
 
 $ncco = new NCCO();
 $record = new Record();
-$record->setEventWebhook(new Webhook( $baseUrl. 'test/recording.php', Webhook::METHOD_POST));
+$record->setEventWebhook(new Webhook( $baseUrl. 'recording.php', Webhook::METHOD_POST));
 $ncco->addAction($record);
 $ncco->addAction(new Talk('Hey, do you like music?'));
 $ncco->addAction(new Stream(MUSIC_FILE));
-$ncco->addAction(new Talk('Thanks for your listing! Good day!'));
+$ncco->addAction(new Talk('Thanks for your listening! Good day!'));
 $outboundCall->setNCCO($ncco);
 
 $response = $client->voice()->createOutboundCall($outboundCall);
