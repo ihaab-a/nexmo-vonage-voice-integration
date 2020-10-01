@@ -6,6 +6,8 @@ $baseUrl = "http://ec2-3-12-163-249.us-east-2.compute.amazonaws.com/test/";
 
 require_once './vendor/autoload.php';
 include_once './config/database.php';
+$db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE) or die("Could not connect : " . mysqli_error());
+$db->set_charset('utf8');
 
 // Pranker App
 define('API_KEY', '8e544a8f');
