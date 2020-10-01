@@ -19,6 +19,17 @@ use Vonage\Voice\NCCO\Action\Stream;
 use Vonage\Voice\NCCO\Action\Record;
 use Vonage\Voice\Webhook;
 
+// log the answer into database;
+$to = isset($_GET['to']) ? $_GET['to'] : '';
+$from = isset($_GET['from']) ? $_GET['from'] : '';
+$uuid = isset($_GET['uuid']) ? $_GET['uuid'] : '';
+$c_uuid = isset($_GET['conversation_uuid']) ? $_GET['conversation_uuid'] : '';
+$details = $db->real_escape_string(json_encode($_GET));
+$now = date('c');
+$str_query = "INSERT INTO answers (number_from, number_to, uuid, conversation_uuid, details, created_at) 
+            VALUES ('{$from}', '{$to}', '{$uuid}', '{$c_uuid}', '{$details}', '{$now}')";
+$db->query($str_query);
+
 
 $ncco = new NCCO();
 $record = new Record();
