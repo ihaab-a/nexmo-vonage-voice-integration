@@ -42,7 +42,7 @@ $record_uuid = $recording->getRecordingUuid();
 $data = $client->get($record_url);
 // logs to database
 $now = date('c');
-$details = $db->real_escape_string(json_encode($data));
+$details = $db->real_escape_string(json_encode($request_array));
 $str_query = "INSERT INTO recordings (url, uuid, details, created_at) 
     VALUES ('{$record_url}', '{$record_uuid}', '{$details}', '{$now}')";
 $db->query($str_query);

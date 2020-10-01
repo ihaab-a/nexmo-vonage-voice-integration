@@ -28,6 +28,7 @@ $outboundCall->setAnswerWebhook(
         Webhook::METHOD_GET
     )
 );
+
 $outboundCall->setEventWebhook(
     new Webhook($baseUrl . 'event.php',
         Webhook::METHOD_POST)

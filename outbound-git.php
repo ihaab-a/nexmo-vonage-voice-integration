@@ -27,12 +27,12 @@ $outboundCall = new OutboundCall(
     new Phone(NUMBER_FROM)
 );
 
-//$outboundCall->setAnswerWebhook(
-//    new Webhook(
-//        'https://developer.nexmo.com/ncco/tts.json',
-//        Webhook::METHOD_GET
-//    )
-//);
+$outboundCall->setAnswerWebhook(
+    new Webhook(
+        'https://developer.nexmo.com/ncco/tts.json',
+        Webhook::METHOD_GET
+    )
+);
 
 $outboundCall->setEventWebhook(
     new Webhook($baseUrl . 'event.php',
@@ -44,8 +44,8 @@ $record = new Record();
 $record->setEventWebhook(new Webhook( $baseUrl. 'recording.php', Webhook::METHOD_POST));
 $ncco->addAction($record);
 $ncco->addAction(new Talk('Hey, do you like music?'));
-$ncco->addAction(new Stream(MUSIC_FILE));
-$ncco->addAction(new Talk('Thanks for your listening! Good day!'));
+//$ncco->addAction(new Stream(MUSIC_FILE));
+//$ncco->addAction(new Talk('Thanks for your listening! Good day!'));
 $outboundCall->setNCCO($ncco);
 
 $response = $client->voice()->createOutboundCall($outboundCall);

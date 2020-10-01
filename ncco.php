@@ -42,4 +42,5 @@ $ncco->addAction(new Talk('Hey, do you like music?'));
 $ncco->addAction(new Stream(MUSIC_FILE));
 $ncco->addAction(new Talk('Thanks for your listening! Good day!'));
 
+header('content-type: application/json');
 echo json_encode($ncco);
