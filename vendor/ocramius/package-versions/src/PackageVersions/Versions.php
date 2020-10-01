@@ -21,6 +21,7 @@ final class Versions
      * @internal
      */
     public const VERSIONS          = array (
+  'fig/http-message-util' => '1.1.4@3242caa9da7221a304b8f84eb9eaddae0a7cf422',
   'guzzlehttp/guzzle' => '7.1.0@7edeaa528fbb57123028bd5a76b9ce9540194e26',
   'guzzlehttp/promises' => 'v1.3.1@a59da6cf61d80060647ff4d3eb2c03a2bc694646',
   'guzzlehttp/psr7' => '1.6.1@239400de7a173fe9901b9ac7c06497751f00727a',
@@ -34,12 +35,16 @@ final class Versions
   'psr/http-client' => '1.0.1@2dfb5f6c5eff0e91e20e913f8c5452ed95b86621',
   'psr/http-factory' => '1.0.1@12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
   'psr/http-message' => '1.0.1@f6561bf28d520154e4b0ec72be95418abe6d9363',
+  'psr/http-server-handler' => '1.0.1@aff2f80e33b7f026ec96bb42f63242dc50ffcae7',
+  'psr/http-server-middleware' => '1.0.1@2296f45510945530b9dceb8bcedb5cb84d40c5f5',
+  'psr/log' => '1.1.3@0f73288fd15629204f9d42b7055f72dacbe811fc',
   'ralouphie/getallheaders' => '3.0.3@120b605dfeb996808c31b6477290a714d356e822',
+  'slim/psr7' => '1.2.0@832912cb3c2a807d472ef0ac392552e85703a667',
   'slim/slim' => '3.12.3@1c9318a84ffb890900901136d620b4f03a59da38',
   'vonage/client' => '2.4.0@29f23e317d658ec1c3e55cf778992353492741d7',
   'vonage/client-core' => '2.4.0@a397028a168ef2ba65804af893ea9c68f1478a10',
   'vonage/nexmo-bridge' => '0.1.0@62653b1165f4401580ca8d2b859f59c968de3711',
-  'tai/045-nexmo' => 'dev-master@94bc4fa631c863c43dd701dfb35c7f5906bc8d5d',
+  'tai/045-nexmo' => 'dev-master@7af1c262a08f068176de774272d3c7c1c03c0bfa',
 );
 
     private function __construct()

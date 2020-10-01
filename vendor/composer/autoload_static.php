@@ -40,10 +40,13 @@ class ComposerStaticInit396771b35a78743dae840ea8a3fcffd5
         ),
         'S' => 
         array (
+            'Slim\\Psr7\\' => 10,
             'Slim\\' => 5,
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
+            'Psr\\Http\\Server\\' => 16,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Http\\Client\\' => 16,
             'Psr\\Container\\' => 14,
@@ -63,6 +66,7 @@ class ComposerStaticInit396771b35a78743dae840ea8a3fcffd5
         ),
         'F' => 
         array (
+            'Fig\\Http\\Message\\' => 17,
             'FastRoute\\' => 10,
         ),
     );
@@ -76,9 +80,22 @@ class ComposerStaticInit396771b35a78743dae840ea8a3fcffd5
         array (
             0 => __DIR__ . '/..' . '/vonage/client-core/src',
         ),
+        'Slim\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/psr7/src',
+        ),
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Psr\\Http\\Server\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-server-handler/src',
+            1 => __DIR__ . '/..' . '/psr/http-server-middleware/src',
         ),
         'Psr\\Http\\Message\\' => 
         array (
@@ -120,6 +137,10 @@ class ComposerStaticInit396771b35a78743dae840ea8a3fcffd5
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Fig\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fig/http-message-util/src',
         ),
         'FastRoute\\' => 
         array (

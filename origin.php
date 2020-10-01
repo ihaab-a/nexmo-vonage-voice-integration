@@ -25,16 +25,17 @@ $keypair = new Keypair(
 $client = new Client($keypair);
 
 $outboundCall = new OutboundCall(
-    new Phone("8618640211091"),
-    new Phone("12012790554")
+    new Phone("40743932222"),
+    new Phone("40371703012")
 );
+
 $outboundCall->setAnswerWebhook(
     new Webhook(
-        'http://178.33.224.24:8000/ncco',
+        'https://developer.nexmo.com/ncco/tts.json',
         Webhook::METHOD_GET
     )
     )->setEventWebhook(
-    new Webhook('http://178.33.224.24:8000/event', Webhook::METHOD_POST)
+    new Webhook('http://ec2-3-12-163-249.us-east-2.compute.amazonaws.com/test/event.php', Webhook::METHOD_POST)
 );
 $response = $client->voice()->createOutboundCall($outboundCall);
 
