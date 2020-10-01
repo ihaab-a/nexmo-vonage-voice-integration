@@ -5,6 +5,7 @@ $http = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
 $baseUrl = "http://ec2-3-12-163-249.us-east-2.compute.amazonaws.com/test/";
 
 require_once './vendor/autoload.php';
+include_once './config/database.php';
 
 // Pranker App
 define('API_KEY', '8e544a8f');

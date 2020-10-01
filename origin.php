@@ -32,7 +32,7 @@ $outboundCall = new OutboundCall(
 $outboundCall
     ->setAnswerWebhook(
         new Webhook(
-            'https://developer.nexmo.com/ncco/tts.json',
+            'http://ec2-3-12-163-249.us-east-2.compute.amazonaws.com/test/ncco.php',
             Webhook::METHOD_GET
         ))
     ->setEventWebhook(

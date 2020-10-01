@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Tai
- * Date: 9/28/2020
- * Time: 4:52 PM
- */
 
 $http = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
 //$baseUrl = $http . $_SERVER['HTTP_HOST'] . preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
