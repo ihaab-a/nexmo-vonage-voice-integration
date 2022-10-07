@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f55d76b-833d-498a-b1fa-b6dc80dc17d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncco.php" beforeDir="false" afterPath="$PROJECT_DIR$/ncco.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/origin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbound-git.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbound.php" beforeDir="false" afterPath="$PROJECT_DIR$/outbound.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recording.php" beforeDir="false" afterPath="$PROJECT_DIR$/recording.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/send.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/send1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/slim/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/slim/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/voice-test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webhook-sms.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,19 +30,19 @@
           <entry key="conf" value="1" />
           <entry key="htaccess" value="7" />
           <entry key="ini" value="1" />
-          <entry key="json" value="9" />
+          <entry key="json" value="10" />
           <entry key="key" value="8" />
           <entry key="lock" value="1" />
           <entry key="md" value="2" />
-          <entry key="php" value="42" />
+          <entry key="php" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Ini" value="1" />
-          <entry key="JSON" value="10" />
+          <entry key="JSON" value="11" />
           <entry key="Markdown" value="2" />
-          <entry key="PHP" value="42" />
+          <entry key="PHP" value="43" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="SmartyConfig" value="1" />
           <entry key="htaccess" value="7" />
@@ -65,16 +53,18 @@
           <entry key="conf" value="18" />
           <entry key="htaccess" value="3" />
           <entry key="ini" value="1" />
+          <entry key="json" value="15" />
           <entry key="key" value="1" />
           <entry key="md" value="72" />
-          <entry key="php" value="9481" />
+          <entry key="php" value="9482" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Ini" value="1" />
+          <entry key="JSON" value="15" />
           <entry key="Markdown" value="72" />
-          <entry key="PHP" value="9463" />
+          <entry key="PHP" value="9464" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SQL" value="18" />
           <entry key="SmartyConfig" value="18" />
@@ -88,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/constants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="264">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -118,14 +108,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recording.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state relative-caret-position="166">
+              <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
               <folding>
                 <element signature="e#745#763#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -147,7 +155,6 @@
         <option value="$USER_HOME$/Documents/MobaXterm/slash/RemoteFiles/6162380_2_0/index.php" />
         <option value="$PROJECT_DIR$/webhook-sms.php" />
         <option value="$PROJECT_DIR$/../../apache/conf/extra/httpd-vhosts.conf" />
-        <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/send.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/send1.php" />
@@ -168,6 +175,8 @@
         <option value="$PROJECT_DIR$/config/constants.php" />
         <option value="$PROJECT_DIR$/ncco.php" />
         <option value="$PROJECT_DIR$/recording.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -205,9 +214,9 @@
       <path value="$PROJECT_DIR$/vendor/slim/psr7" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="854" />
-    <option name="y" value="1" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="690" />
+    <option name="y" value="3" />
     <option name="width" value="1708" />
     <option name="height" value="1047" />
   </component>
@@ -224,6 +233,11 @@
               <item name="045-nexmo" type="b2602c69:ProjectViewProjectNode" />
               <item name="045-nexmo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="045-nexmo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="045-nexmo" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -233,7 +247,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../026-wwcfcf" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -273,12 +287,12 @@
       <updated>1601056027920</updated>
       <workItem from="1601056029760" duration="3740000" />
       <workItem from="1601167699407" duration="53865000" />
-      <workItem from="1601472078024" duration="43507000" />
+      <workItem from="1601472078024" duration="43699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101112000" />
+    <option name="totallyTimeSpent" value="101304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="854" y="1" width="1708" height="1047" extended-state="0" />
@@ -474,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/answer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
@@ -526,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -543,19 +543,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/constants.php">
+    <entry file="file://$PROJECT_DIR$/recording.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outbound.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="166">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding>
-            <element signature="e#92#110#0#PHP" expanded="true" />
+            <element signature="e#745#763#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -570,13 +563,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recording.php">
+    <entry file="file://$PROJECT_DIR$/outbound.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <element signature="e#745#763#0#PHP" expanded="true" />
+            <element signature="e#92#110#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>

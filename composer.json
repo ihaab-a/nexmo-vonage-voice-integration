@@ -1,9 +1,7 @@
 {
-    "name": "tai/045-nexmo",
+    "name": "starpromo/nexmo",
     "require": {
-        "slim/slim": "3.*",
         "vonage/client": "^2.4",
-        "vonage/client-core": "^2.4",
-        "slim/psr7": "^1.2"
+        "vonage/client-core": "^2.4"
     }
 }
